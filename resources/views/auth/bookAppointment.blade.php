@@ -57,6 +57,7 @@
                 dataType:'html',
                 url:'{{url('/home/selectdoc/doccategory')}}',
                 data:{'_token': '{!! csrf_token() !!}','cat_id':catID },
+                
                 success:function(response){
                     $("#doctorData").html(response);
 

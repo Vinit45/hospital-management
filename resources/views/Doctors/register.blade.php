@@ -145,11 +145,13 @@
                 <span class="input-group-text"><i class="fas fa-chalkboard"></i></span>
                 <select name="role_id" class="custom-select">
                         <option value="" >You are</option>
-                        <option value="10">Neurosurgeon</option>
-                        <option value="11">Gynaecologist</option>
-                        <option value="12">General Physian</option>
-                        <option value="13">Cardiologists</option>
-                        <option value="14">Dermatologists</option>
+                        <option value="10">General Dentist</option>
+                        <option value="11">Pedodontist or Pediatric Dentist</option>
+                        <option value="12">Orthodontist</option>
+                        <option value="13">Periodontist</option>
+                        <option value="14">Endodontist</option>
+                        <option value="15">Oral Pathologist or Oral Surgeon</option>
+                        <option value="16">Prosthodontist</option>
                     </select>   
             </div>
         </div>

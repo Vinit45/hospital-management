@@ -22,13 +22,29 @@
         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 
     </head>
+    <style>
+        @media (max-width: 480px) {
+            .login-icon {
+                display: none;
+            }
+            .dental{
+                display: none;
+            }
+        }
+        @media(min-width: 900px)
+        {
+            .login-icondes{
+                display:none;
+            }
+        }
+    </style>
     
-    <body>
+    <body style="overflow-x:hidden ">
         <div class="header-top">
             
                 <div class="row">
                     <div class="col-sm-6">
-                        <ul class="d-lg-flex header-w3_pvt">
+                        <ul class="d-lg-flex header-w3_pvt" style="margin-top: 12px">
                             <li class="mr-lg-3">
                                 <span class="fa fa-envelope-open"></span>
                                 <a href="mailto:info@example.com" class="">info@example.com</a>
@@ -40,7 +56,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-6 header-right-w3_pvt">
-                        <ul class="d-lg-flex header-w3_pvt justify-content-lg-end">
+                        <ul class="d-lg-flex header-w3_pvt justify-content-lg-end" style="margin-top: 12px">
                             <li class="mr-lg-3">
                                 <span class=""><span class="fa fa-clock-o"></span>Mon - Fri : 8:30am to 9:30pm</span>
                             </li>
@@ -58,7 +74,7 @@
         <header class="py-3">
             <div class="container">
                     <div id="logo">
-                        <h1> <a href="index.html"><span class="fa fa-stethoscope" aria-hidden="true"></span> Dental Health</a></h1>
+                        <h1> <a href="/"><span class="fa fa-stethoscope" aria-hidden="true"></span> Dental Health</a></h1>
                     </div>
                 <!-- nav -->
                 <nav class="d-lg-flex">
@@ -67,14 +83,18 @@
                     @guest
                     <ul class="menu mt-2 ml-auto">
                             <li class="active"><a href="/">Home</a></li>
-                            <li class=""><a href="about.html">About Us</a></li>
-                            <li class=""><a href="services.html">Services</a></li>
-                            <li class=""><a href="gallery.html">Gallery</a></li>
-                            <li class=""><a href="blog.html">Blog</a></li>
-                            <li class=""><a href="contact.html">Contact Us</a></li>
+                            <li class=""><a href="/aboutus">About Us</a></li>
+                            <li class=""><a href="/services">Services</a></li>
+                            {{-- <li class=""><a href="blog.html">Blog</a></li> --}}
+                            <li class=""><a href="/contactus">Contact Us</a></li>
                     </ul>
                     @else
                     <ul class="menu mt-2 ml-auto">
+                        <li class="active"><a href="/">Home</a></li>
+                            <li class=""><a href="/aboutus">About Us</a></li>
+                            <li class=""><a href="/services">Services</a></li>
+                            {{-- <li class=""><a href="blog.html">Blog</a></li> --}}
+                            <li class=""><a href="/contactus">Contact Us</a></li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>

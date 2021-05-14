@@ -25,9 +25,12 @@ Route::get('/bookappointment','PaitentsController@bookAppointment');
 Route::group(['prefix' => 'doctor', 'middleware' => ['auth:doctor']], 
 function () 
 {
-    Route::view('', 'Doctors.dashboard');
+    Route::get('', 'DoctorsController@checkSchedule');
+    Route::post('{id}/{patient_id}', 'DoctorsController@appointmentStatus');
     Route::get('updateprofile','ProfileController@indexDoctor');
     Route::post('updateprofile', 'ProfileController@editDetails');
+    Route::get('allappointments', 'DoctorsController@allappointments');
+    Route::post('allappointments/{id}/{doctor_id}', 'DoctorsController@appointmentStatusbyadmin');
 
 
 });
@@ -42,7 +45,13 @@ function ()
     Route::get('selectdoc/doccategory/{id}', 'HomeController@book');
     Route::get('profile', 'ProfileController@indexPatients');
     Route::post('profile', 'ProfileController@updatePatients');
+    Route::get('prescriptions', 'PrescriptionController@history');
+
 });
+Route::view('/contactus', 'pages.contactus');
+Route::view('/services', 'pages.services');
+Route::view('/aboutus', 'pages.aboutus');
+
 Route::post('/login/admin', 'Auth\LoginController@adminLogin');
 Route::post('/login/doctor', 'Auth\LoginController@doctorLogin');
 Route::post('/register/admin', 'Auth\RegisterController@createAdmin');

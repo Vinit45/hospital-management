@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateSchedulesTable extends Migration
+class CreateImgPrescriptionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateSchedulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('schedules', function (Blueprint $table) {
+        Schema::create('img_prescriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('doctor_id');
-            $table->string('timing_slot');
-            $table->integer('status')->default(0);
-            $table->integer('patient_id')->nullable();
+            $table->string('img');
+            $table->integer('patient_id');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateSchedulesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schedules');
+        Schema::dropIfExists('img_prescriptions');
     }
 }

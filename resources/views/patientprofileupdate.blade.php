@@ -1,7 +1,7 @@
 @extends('layouts.app2')
 <style>
     body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background: -webkit-linear-gradient(left, #00bcd5, #00c6ff);
 }
 .emp-profile{
     padding: 3%;
@@ -11,11 +11,15 @@
     background: #fff;
 }
 .profile-img{
+    position: relative;
     text-align: center;
+    right: 0;
 }
 .profile-img img{
-    width: 70%;
-    height: 100%;
+    position: relative;
+
+    width: 50%;
+    height: 50%;
 }
 .profile-img .file {
     position: relative;
@@ -25,7 +29,11 @@
     border: none;
     border-radius: 0;
     font-size: 15px;
+    color:#ffff;
     background: #212529b8;
+}
+.profile-img .file:hover {
+    background:#00bcd5 ;
 }
 .profile-img .file input {
     position: absolute;
@@ -33,24 +41,26 @@
     right: 0;
     top: 0;
 }
-.profile-head h5{
+.profile-head h3{
     color: #333;
 }
 .profile-head h6{
-    color: #0062cc;
+    color: #00bcd5;
 }
 .profile-edit-btn{
     border: none;
     border-radius: 1.5rem;
     width: 70%;
     padding: 2%;
+    margin-left: 45%;
+    margin-top: 12%;
     font-weight: 600;
-    color: #6c757d;
+    color: #00bcd5;
     cursor: pointer;
 }
 .profile-edit-btn:hover{
     color:whitesmoke;
-    background-color: #333;
+    background-color: #00bcd5;
 }
 .proile-rating{
     font-size: 12px;
@@ -63,7 +73,7 @@
     font-weight: 600;
 }
 .profile-head .nav-tabs{
-    margin-bottom:5%;
+    margin-bottom:3%;
 }
 .profile-head .nav-tabs .nav-link{
     font-weight:600;
@@ -71,7 +81,7 @@
 }
 .profile-head .nav-tabs .nav-link.active{
     border: none;
-    border-bottom:2px solid #0062cc;
+    border-bottom:2px solid #00bcd5;
 }
 .profile-work{
     padding: 14%;
@@ -97,46 +107,34 @@
 }
 .profile-tab p{
     font-weight: 600;
-    color: #0062cc;
+    color: #00bcd5;
 }
 
 </style>
 @section('content')
-<div class="container emp-profile">
+<div class="container emp-profile" style="margin-top: 70px">
     <form method="post">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md">
                     <div class="profile-head">
-                            <h5>
+                            <h3>
                                 {{$profile->name}}
-                            </h5>
+                            </h3>
                             <h6>
                                 Patient
                             </h6>
-                            <p class="proile-rating"></p>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Personal Info</a>
                         </li>
                     </ul>
                 </div>
                 
             </div>
-            <div class="col-md-4">
-                <div class="profile-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                    <div class="file btn btn-lg btn-primary">
-                        Change Photo
-                        <input type="file" name="file"/>
-                    </div>
-                </div>
-            </div>
+                
             
         </div>
-        <div class="row">
+        <div class="row m-0">
             <div class="col-md-8">
             <form method = "POST" action ="/home/profile/{{$profile->id}}" >
                 @csrf
@@ -176,63 +174,22 @@
                                         <input id="phone_no" type="text" class="form-control" name="phone_no" value="{{$profile->phone_no }}" required>
                                     </div>
                                 </div>
-                                
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Experience</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Expert</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Hourly Rate</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>10$/hr</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Total Projects</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>230</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>English Level</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Expert</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Availability</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>6 months</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2">
-
-                                    </div>
-                                    <div class="col-md-5">
+                                <div class="col-md-5">
                                     <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Update Profile"/>
-                                         
-                                    </div>
-                                   
+                            
                                 </div>
-                                   
                                 
                     </div>
-                </div>
+                                
+                                
+                                
+                                
+                
+                                    
+                                   
+            
+                                   
+                    </div>
                 </form>
             </div>
         </div>

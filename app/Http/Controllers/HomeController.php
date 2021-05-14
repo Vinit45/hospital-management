@@ -64,31 +64,10 @@ class HomeController extends Controller
                 'reason' =>['string','required'],
             ]);
             $patient = Auth::user();
-            // $teacher = $student->division_class->divisions;
-            // return $teacher;
-            // $record =   InternalTest::where('student_id',$student->id)->where('subject_id',$request->session()->get('subject_id','Error'))->first();
-            // $teacher_id = DivisionTeacher::where('division_id',$student->division)->where('subject_id',$request->session()->get('subject_id','Error'))->first()->value('teacher_id'); 
-            // if($record['ia1'] == -2 && $record['ia2'] == -2 )
-            // {
-            //     $ans = 3;
-            // }
-            // elseif($record['ia1'] == -2)
-            // {
-            //     $ans = 1;
-            // }
-            // elseif($record['ia2'] == -2)
-            // {
-            //     $ans = 2;
-            // }
-            // Get filename with the extension
             $filenameWithExt = $request->file('certificate')->getClientOriginalName();
-            // Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just ext
             $extension = $request->file('certificate')->getClientOriginalExtension();
-            // Filename to store
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
-            // Upload Image
             $path = $request->file('certificate')->storeAs('public/certificate', $fileNameToStore);
             Application::create(
                 [
@@ -97,7 +76,6 @@ class HomeController extends Controller
                     
                 ]
             );
-            // $request->session()->forget('subject_id');
             return redirect('home');
     }
 }

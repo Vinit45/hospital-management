@@ -18,7 +18,6 @@ class ProfileController extends Controller
     public function indexDoctor()
     {
         $profile= Auth::user();
-    //    return $profile;
         $roles = DB::table('roles')
                     ->where('id', '=', $profile->role_id)
                     ->get();

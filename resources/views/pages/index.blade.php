@@ -20,7 +20,7 @@
                                                 <p class="w3ls_pvt-title my-3">Onec Consequat Sapien Ut Leo Cursus Rhoncus. Nullam Dui Mi, Vulputate Ac 
                                                 Metus Semper Nullam Dui Mi. Vestibulum Ante Ipsum Primis In Faucibus Orci Luctus Et Ultrices Posuere 
                                                 Cubilia Curae.</p>
-                                                <a href="/bookappointment" class="btn btn-banner my-sm-3 mb-3">Book Appointment</a>
+                                                <a href="/bookappointment" class="btn btn-banner my-sm-3 mb-3">Read More</a>
                                                
                                             </div>
                                         </div>
@@ -62,7 +62,7 @@
         
                             </div>
                             <div class="col-lg-6 col-md-8">
-                                <img src="images/banner.png" alt="" class="img-fluid" />
+                                <img src="{{asset('/storage/banner.png')}}" alt="" class="img-fluid" />
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-8 dental">
-                        <img src="images/tooth.png" class="img-fluid" alt="" />
+                        <img src="{{asset('/storage/tooth.png')}}" class="img-fluid" alt="" />
                     </div>
                 </div>
             </div>
@@ -129,8 +129,8 @@
         <section class="about-bottom pb-5">
             <div class="container pb-lg-3">
                 <div class="row bottom-grids">
-                    <div class="col-lg-6">
-                        <img src="images/about.jpg" class="img-fluid" alt="" />
+                    <div class=" col-lg-6">
+                        <img src="{{asset('/storage/about.jpg')}}" class="img-fluid" alt="" />
                     </div>
                     <div class="col-lg-6 mt-lg-0 mt-5">
                         <h4>Routine Dental Exams and Check ups at 30$.</h4>
@@ -202,115 +202,15 @@
         </section>
         <!-- //services -->	
         
-        <!-- testimonials -->
-        <section class="feedback" id="testimonials">
-            <div class="feedback-layer py-5">
-                <div class="container py-lg-5">
-                <h3 class="heading text-center mb-sm-5 mb-4">Testimonials</h3>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="feedback-info">
-                                <div class="feedback-top p-4">
-                                    <span class="fa fa-quote-right"></span> 
-                                    <p> Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra.</p>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="feedback-grids">
-                                    <div class="feedback-img">
-                                        <img src="images/ser1.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="feedback-img-info">
-                                        <h5>Mary Jane</h5>
-                                        <p class="font-italic">- March 3, 2019.</p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
-                            <div class="feedback-info">
-                                <div class="feedback-top p-4">
-                                    <span class="fa fa-quote-right"></span> 
-                                    <p> Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra.</p>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="feedback-grids">
-                                    <div class="feedback-img">
-                                        <img src="images/ser2.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="feedback-img-info">
-                                        <h5>Mary Jane</h5>
-                                        <p class="font-italic">- March 3, 2019.</p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
-                            <div class="feedback-info">
-                                <div class="feedback-top p-4">
-                                    <span class="fa fa-quote-right"></span> 
-                                    <p> Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra.</p>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="feedback-grids">
-                                    <div class="feedback-img">
-                                        <img src="images/ser3.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="feedback-img-info">
-                                        <h5>Mary Jane</h5>
-                                        <p class="font-italic">- March 3, 2019.</p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //testimonials -->
         
-        <!-- blog -->
-        <section class="blog py-5">
-            <div class="container py-md-5 py-3">
-                <h3 class="heading text-center mb-sm-5 mb-4">Latest News </h3>
-                <div class="row blog-grids">
-                    <div class="col-lg-7 mb-lg-5 blog-img1">
-                        <img src="images/blog1.jpg" alt="" class="img-fluid"/>
-                        <a href="single.html">Blog #1</a>
-                    </div>
-                    <div class="col-lg-5 mb-lg-5 mb-4">
-                        <h5>March 3, 2019.</h5>
-                        <h4 class="my-3">Nullam dui mi, vulputate ac cursus.</h4>
-                        <p class="my-3">onec consequat sapien ut leo cursus rhoncus. Nullam duit mi, vulputate ac metus semper Nullam dui mi.
-                         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices morbi posuere cubilia Curae; Curabitur quis luctus lectus.
-                         leo et cursus rhoncus. Nullam dui mi, vulputate cursus. </p>
-                        <a href="single.html" class="btn-banner"> View Post </a>
-                    </div>
-                    <div class="col-lg-5 mb-lg-0 mb-4">
-                        <h5>March 3, 2019.</h5>
-                        <h4 class="my-3">Nullam dui mi, vulputate ac cursus.</h4>
-                        <p class="my-3">onec consequat sapien ut leo cursus rhoncus. Nullam duit mi, vulputate ac metus semper Nullam dui mi.
-                         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices morbi posuere cubilia Curae; Curabitur quis luctus lectus.
-                         leo et cursus rhoncus. Nullam dui mi, vulputate cursus.</p>
-                        <a href="single.html" class="btn-banner"> View Post </a>
-                    </div>
-                    <div class="col-lg-7 blog-img2">
-                        <img src="images/blog1.jpg" alt="" class="img-fluid"/>
-                        <a href="single.html">Blog #2</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //blog -->
+        
         
         <!-- appointment -->
         <section class="appointment text-center py-5">
             <div class="container py-sm-3">
                 <h4>make your dream smile a reality</h4>
                 <p class="mt-3">Call Us To Book Your Appointment Today</p>
-                <a href="contact.html">Book an Appointment</a>
+                <a href="contact.html">Contact Us</a>
             </div>
         </section>
         <!-- //appointment -->

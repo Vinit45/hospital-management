@@ -1,3 +1,4 @@
+<div class="table-responsive">
 <table id="zero_config" class="table table-striped table-bordered" style="margin-top:20px">
         <thead>
         <tr>
@@ -20,10 +21,11 @@
                     @if($d->status==1)
                     <td><p>Booked</p></td>
                     @else
-                    <td><a href="/home/selectdoc/doccategory/{{$d->id}}" class="btn btn-danger">Book</a></td>
+                    <td><a href="/home/selectdoc/doccategory/{{$d->id}}" class="btn btn-success">Book</a></td>
                     @endif
                             
                 </tr>
             @endforeach
         </tbody>
 </table>
+</div>
